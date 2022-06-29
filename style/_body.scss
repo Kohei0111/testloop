@@ -1,0 +1,75 @@
+.flex {
+  display: flex;
+  margin: 10% auto;
+  width: 80%;
+  position: relative;
+
+  @include mq(sp) {
+    position: static;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  img {
+    width: 60%;
+
+    @include mq(sp) {
+      margin: 10% auto;
+      width: 85%;
+    }
+  }
+
+  .text {
+    width: 50%;
+    height: auto;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    padding: 6% 0 0 6%;
+
+    @include mq(tab) {
+      padding: 3% 0 0 3%;
+    }
+
+    @include mq(sp) {
+      width: 90%;
+      position: static;
+      text-align: center;
+      margin: 10% auto;
+      padding: 0;
+    }
+
+    h2 {
+      max-width: 100%;
+      font-family: $font-josefin;
+      font-weight: 300;
+      font-size: 4.5rem;
+      margin-bottom: 5%;
+
+      @include mq(tab) {
+        font-size: 3rem;
+      }
+
+      @include mq(sp) {
+        font-size: 3.5rem;
+      }
+    }
+
+    p {
+      font-family: $font-alata;
+      color: $color-Dark-Gray;
+      font-size: 1.6rem;
+      line-height: 2.5rem;
+
+      @include mq(tab) {
+        font-size: 1.2rem;
+      }
+
+      @include mq(sp) {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
+}

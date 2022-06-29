@@ -1,0 +1,187 @@
+.container_creations {
+  width: 80%;
+  margin: 10% auto;
+  gap: 20px;
+  display: grid;
+  grid-template:
+    "title title button button" 80px
+    "c1 c2 c3 c4" 400px
+    "c5 c6 c7 c8" 400px
+    / 1fr 1fr 1fr 1fr;
+
+  @include mq(tab) {
+    width: 90%;
+    grid-template:
+      " title button"
+      "c1 c2" 120px
+      "c3 c4" 120px
+      "c5 c6" 120px
+      "c7 c8" 120px
+      /1fr 1fr;
+  }
+
+  @include mq(sp) {
+    width: 90%;
+    grid-template:
+      "title"
+      "c1" 120px
+      "c2" 120px
+      "c3" 120px
+      "c4" 120px
+      "c5" 120px
+      "c6" 120px
+      "c7" 120px
+      "c8" 120px
+      "button"
+      /1fr;
+  }
+
+  .grid_title {
+    grid-area: title;
+    font-family: $font-josefin;
+    font-style: 300;
+    color: black;
+    font-size: 4.5rem;
+
+    @include mq(sp) {
+      margin: 0 auto 10%;
+      font-size: 3rem;
+    }
+  }
+
+  .button {
+    cursor: pointer;
+    display: flex;
+    grid-area: button;
+    border: 2px $color-Very-Dark-Gray solid;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 0 auto;
+    width: 150px;
+    height: 40px;
+
+    font-family: $font-alata;
+    font-size: 1.7rem;
+    letter-spacing: 0.3rem;
+    color: $color-Very-Dark-Gray;
+    transition-duration: 0.5s;
+
+    &:hover {
+      background-color: $color-Very-Dark-Gray;
+      color: white;
+      transition-duration: 0.5s;
+    }
+
+    @include mq(sp) {
+      margin: 10% auto;
+    }
+  }
+  div {
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    transition-duration: 0.5s;
+
+    &::before {
+      background-color: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: "";
+    }
+    &:hover {
+      transform: scale(1.1);
+      transition-duration: 0.5s;
+    }
+  }
+
+  div > p {
+    color: white;
+    font-family: $font-josefin;
+    font-weight: 300;
+    font-size: 3em;
+    margin: auto 10% 10%;
+    z-index: 1;
+
+    @include mq(tab) {
+      font-size: 3rem;
+      margin: auto 5% 5%;
+    }
+
+    @include mq(sp) {
+      font-size: 2.5rem;
+      margin: auto 5% 5%;
+    }
+  }
+
+  .content_1 {
+    background-image: url(../images/desktop/image-deep-earth.jpg);
+    grid-area: c1;
+
+    @include mq(tab) {
+      background-image: url(../images/mobile/image-deep-earth.jpg);
+    }
+  }
+  .content_2 {
+    background-image: url(../images/desktop/image-night-arcade.jpg);
+    grid-area: c2;
+
+    @include mq(tab) {
+      background-image: url(../images/mobile/image-night-arcade.jpg);
+    }
+  }
+  .content_3 {
+    background-image: url(../images/desktop/image-soccer-team.jpg);
+    grid-area: c3;
+
+    @include mq(tab) {
+      background-image: url(../images/mobile/image-soccer-team.jpg);
+    }
+  }
+  .content_4 {
+    background-image: url(../images/desktop/image-grid.jpg);
+    grid-area: c4;
+
+    @include mq(tab) {
+      background-image: url(../images/mobile/image-grid.jpg);
+    }
+  }
+  .content_5 {
+    background-image: url(../images/desktop/image-from-above.jpg);
+    grid-area: c5;
+
+    @include mq(tab) {
+      background-image: url(../images/mobile/image-from-above.jpg);
+    }
+  }
+  .content_6 {
+    background-image: url(../images/desktop/image-pocket-borealis.jpg);
+    grid-area: c6;
+
+    @include mq(tab) {
+      background-image: url(../images/mobile/image-pocket-borealis.jpg);
+    }
+  }
+  .content_7 {
+    background-image: url(../images/desktop/image-curiosity.jpg);
+    grid-area: c7;
+
+    @include mq(tab) {
+      background-image: url(../images/mobile/image-curiosity.jpg);
+    }
+  }
+  .content_8 {
+    background-image: url(../images/desktop/image-fisheye.jpg);
+    grid-area: c8;
+
+    @include mq(tab) {
+      background-image: url(../images/mobile/image-fisheye.jpg);
+    }
+  }
+}
